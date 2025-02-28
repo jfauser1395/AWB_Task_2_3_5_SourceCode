@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Pricing Calculator</title>
+    <!-- Link to the external JavaScript file for functionality -->
+    <script src="menuPricingCalculator.js"></script>
+  </head>
+  <body>
+    <h1>Menu Pricing Calculator</h1>
+    <h3>Enter Ingredients for the Recipe</h3>
+
+    <!-- Form to enter ingredient details -->
+    <form>
+      <!-- Input for ingredient name -->
+      <input
+        type="text"
+        id="ingredientName"
+        placeholder="Ingredient Name"
+        required
+      /><br />
+
+      <!-- Input for price per unit of the ingredient -->
+      <input
+        type="number"
+        step="any"
+        id="pricePerUnit"
+        placeholder="Price per Unit in $"
+        required
+      /><br />
+
+      <!-- Input for the pricing unit (e.g., kg, g, etc.) -->
+      <input
+        type="text"
+        id="pricingUnit"
+        placeholder="Pricing Unit (e.g., kg, g, etc.)"
+        required
+      /><br />
+
+      <!-- Input for the amount needed for the recipe -->
+      <input
+        type="number"
+        step="any"
+        id="amountNeeded"
+        placeholder="Amount Needed"
+        required
+      /><br />
+
+      <!-- Input for the unit of the required amount (e.g., kg, g, etc.) -->
+      <input
+        type="text"
+        id="amountUnit"
+        placeholder="Amount Unit (e.g., kg, g, etc.)"
+        required
+      />
+    </form><br />
+   
+    <!-- Submit button to add ingredient details -->
+    <button type="button" onclick="enterIngredients();">Submit</button><br />
+
+    <!-- List to display the ingredients added -->
+    <div>
+      <ul id="ingredientList"></ul>
+    </div>
+
+    <!-- Section to add the recipe name -->
+    <h3>Enter Recipe Name</h3>
+    <input type="text" id="newRecipe" placeholder="New Recipe Name" />
+
+    <!-- Button to add the dish to the menu -->
+    <button type="button" onclick="enterDishName()">Add Dish to Menu</button><br /><br />
+
+    <div>
+      <ul id="dishList"></ul>
+    </div>
+
+    <!-- Button to generate the calculation and menu tables -->
+    <button type="button" onclick="generateTable()">Generate Tables</button>
+
+    <!-- Container for the tables, initially hidden -->
+    <div id="tableContainer" hidden>
+      <h3>Calculation Table</h3>
+
+      <!-- Table displaying dish cost breakdown -->
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Dish</th>
+            <th>Selling Price (10% tax included)</th>
+            <th>Taxes</th>
+            <th>Ingredient Costs</th>
+            <th>Profit Margin</th>
+            <th>Ingredient List</th>
+          </tr>
+        </thead>
+        <!-- Table body to be populated dynamically -->
+        <tbody id="calcTableBody"></tbody>
+      </table>
+
+      <!-- Table displaying the menu with dish names and prices -->
+      <h3>Menu Table</h3>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Dish</th>
+            <th>Selling Price</th>
+          </tr>
+        </thead>
+        <!-- Table body to be populated dynamically -->
+        <tbody id="menuTableBody"></tbody>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="www.sitemaps.org">
+    <url id="1" lang="as">
+        <loc>https://www.example.com/</loc>
+        <lastmod>2023-10-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <media>
+            <image id="img>" format="f" format="js">
+                <loc>https://www.example.com/images/home.jpg</loc>
+                <caption>Home Page Image</caption>
+            </image>
+            <video id="vid1" duration=120 width=640" height="360 duration="fa">
+                <loc>https://www.example.com/videos/home.mp4</loc>
+                <caption>Welcome Video</caption>
+            </video>
+        </media>
+    </url>
+    <url id="2" lang="en">
+        <loc>https://www.example.com/about</loc>
+        <lastmod>2023-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <media>
+            <image id="img2" format="jpg">
+                <loc>https://www.example.com/images/about.jpg</loc>
+                <caption>About Us Image</caption>
+            </image>
+            <video id="vid2" duration="" width="640" height="360">
+                <loc>https://www.example.com/videos/about.mp4</loc>
+                <caption>About Us Video</caption>
+            </video>
+        </media>
+    </url>   
+</urlset>
